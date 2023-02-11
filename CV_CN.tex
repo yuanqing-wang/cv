@@ -1,0 +1,206 @@
+\documentclass[letterpaper,10pt]{ctexart}
+
+
+%A Few Useful Packages
+\usepackage{xeCJK}
+ 
+\setCJKmainfont{simsun.ttf}
+\setCJKsansfont{simhei.ttf}
+\setCJKmonofont{simfang.ttf}
+
+
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{ \Huge  王源清
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\begin{center}
+
+
+520-1370 North Campus Research Complex\\
+1600 Huron Parkway, Ann Arbor, MI 48105\\
+\href{mailto:wangyq@umich.edu}{wangyq@umich.edu} +1 734-834-9058\\
+\end{center}
+
+%Section: Education
+\section{教育经历}
+\begin{tabular}{rl}	
+ \textsc{Current}  & \textbf{LSA} Undergraduate \\ & Major:  \textit{Honor} \textsc{Chemistry} and \textsc{Comparative Literature} \\
+ & Minor: Mathmatics\\
+ & \textbf{University of Michigan}, Ann Arbor, MI
+\\&\\
+2014-2016& Undergraduate in \textsc{Chemistry},  \normalsize\textbf{Sichuan University}, Chengdu, China\\&\\
+2015-\textsc{Current} & 15 online courses completed on \url{http://coursera.org}, including courses \\ & on \href{https://www.coursera.org/account/accomplishments/certificate/KQ9HQDJD6Q6D}{Solar Cells Engineering},
+\href{https://www.coursera.org/account/accomplishments/certificate/NUVY8VE5ZERV}{Algorithm},
+\href{https://www.coursera.org/account/accomplishments/certificate/PR3V2KY7JTN3}{Information Science},
+\href{https://www.coursera.org/account/accomplishments/certificate/79CSDQ9U32BR}{Data Science}, \\ & and
+\href{https://www.coursera.org/account/accomplishments/certificate/FQ235GTZ42AE}{Front-end Web Design}. \\\\ % & and still taking more.
+
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Scholarships, Fellowships, Honors and Awards}
+
+
+\begin{tabular}{rl}
+\textsc{2017} & \textbf{University of Michigan UROP} \\ &  Biomedical and Life Sciences Summer Fellowship\\\\
+
+\textsc{Oct 2014 -Jun 2016} & \textbf{Ministry of Education} and  \textbf{Ministry of Finance} of P.R. China \\ &Pilot Plan for Forstering Top-notch Students in Basic Science \\\\
+ \textsc{Jan} 2015 \textsc{Jun} 2015 & National Scholarship for Students in \\ \textsc{Jan} 2016 \textsc{Jun} 2016 & Pilot Plan for Forstering Top-notch Students in Basic Science \\ \footnotesize(Consecutively Four Times) & \emph{First Class}\\\\
+ \textsc 2013 &\textbf{Yangtse Evening Post} \\& Distinguished Student Writer\\
+\end{tabular}
+
+\section{Research Experience}
+\begin{tabular}{r|p{11cm}}
+2016-\textsc{Current} & \textbf{Prof. Nouri Neamati Computer-Aided Drug Design Lab} \\ &\emph{Translational Oncology Program}\\&Undergraduate Researcher\\ & Focus: Design of Iron Chelator Drugs \emph{in Silico} \multicolumn{2}{c}{}\\
+
+
+2015-2016 &  \emph{National Undergraduate Innovative Research Training Program} \\& Research Team Leader \\& Topic: Preparation and Characterization of Natural-Dye-Based Dye Sensitized Solar Cells\\\multicolumn{2}{c}{}\\
+
+\textsc{2014-2016} &  \textbf{Ministry of Education of P.R. China Key Laboratory of Green Chemistry and Technology (Sichuan University) - Prof. Jingsong You Lab}\\& Undergraduate Researcher \\& Focus: Green Synthesis Methodology and Dye Sensitized Solar Cells\\\multicolumn{2}{c}{}\\
+
+\end{tabular}
+
+
+
+%Section: Work Experience at the top
+
+
+
+\section{Publications and Presentations}
+\begin{tabular}{p{14cm}}
+
+Y. Wang; B. Debnath; and N. Neamati. Designing Target-Specific Iron Chelator Drugs in Silico. \emph{Presented at UROP Symposium; Abstract Submitted on UROP Symposium; Full Article to be Pubished.}\\\\
+
+\emph{A Bite of the Old Times}, Chongqing, China: Chongqing Publishing House, 2016 (in Chinese) (Co-Author)\\\\
+
+
+%\textsc{2015-2016} & \textbf{Chongqing Publishing House} \\& \emph{A Bite of the Old Times} (in Chinese) (co-author) \\&ISBN:9787229105013\\\multicolumn{2}{c}{}\\
+\end{tabular}
+
+
+
+%Section: Work Experience at the top
+\section{Work and Volunteer Experience}
+\begin{tabular}{r|p{11cm}}
+\ \ \ \ \ \ \ 2015-\textsc{Current} & \url{cousera.org} \\& Subtitle Translator \\\multicolumn{2}{c}{}\\
+
+\ \ \ \ \ \ \ 2017 & \textbf{University of Michigan HOME} \\
+                   & Orientation Leader\\\multicolumn{2}{c}{}\\
+
+\ \ \ \ \ \ \  2016-\testsc{Current} & {\color{red}$\mathbf{TED^X}$}\textbf{UofM}\\ &Speaker coach
+\\\multicolumn{2}{c}{}\\
+
+\ \ \ \ \ \ \ 2016-2017 & \textbf{University of Michigan Undergraduate Research Journal}\\ & Science Section Editor
+\\\multicolumn{2}{c}{}\\
+
+
+\ \ \ \ \ \ \ 2015-2016 & \textbf{Wenshu Buddhist Monastery}, Chengdu, China\\ & Writer and Media Manager
+\\\multicolumn{2}{c}{}\\
+
+
+\ \ \ \ \ \ \ 2014-2015 & \textbf{Autistic Children Caring Center}, Chengdu, China\\ & Volunteer Teacher 
+\\\multicolumn{2}{c}{}\\
+
+\ \ \ \ \ \ \ \textsc{Aug 2015} & \textbf{Unnamed Countryside School}, Siem Reap, Cambodia\\ & Volunteer Teacher 
+\\\multicolumn{2}{c}{}\\
+
+\ \ \ \ \ \ \ \textsc{Jul 2015} & \textbf{More Tex Technology Co.,Ltd}, Wuxi High-Tech Zone, Wuxi, China\\ & R\&D Intern on Hot-Melt Adhesives
+\\\multicolumn{2}{c}{}\\
+
+\ \ \ \ \ \ \ \textsc{2008-2012} & \textbf{Nanjing First Middle School and Nanjing First High School}, \\ &Nanjing, China\\ & Art Director and Piano Player in School Chorus. 
+\\\multicolumn{2}{c}{}\\
+
+
+
+
+
+
+
+\end{tabular}
+
+
+
+
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Chinese:}&Mothertongue\\
+\textsc{English:}&Fluent\\
+\end{tabular}
+
+
+
+\end{document}

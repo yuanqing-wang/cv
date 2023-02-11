@@ -1,0 +1,274 @@
+\documentclass[letterpaper,10pt]{article}
+
+
+%A Few Useful Packages
+
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{longtable}
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+\usepackage[
+backend=biber,
+style=ieee,
+sorting=ydnt
+]{biblatex}
+\addbibresource{main.bib}
+
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+% \addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{ \Huge  Yuanqing Wang
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\begin{center}
+
+417 E 68th St\\
+Zuckerman Research Center Z618\\
+New York, N.Y. 10065\\
+\href{mailto:wangyq@wangyq.net}{wangyq@wangyq.net} +1 (734)834-9058\\
+\end{center}
+
+\section{Academic Positions}
+\begin{longtable}{p{0.20\textwidth} p{0.80\textwidth} }
+\textsc{2023--Current} & Simons Center Fellow \\
+& \textbf{New York University} \\
+& New York, N.Y. \\\\
+\end{longtable}
+
+%Section: Education
+\section{Education}
+\begin{longtable}{p{0.20\textwidth} p{0.80\textwidth} }
+
+\textsc{2018--2023} & \textbf{Ph.D.}, \textsc{Physiology, Biophysics, and System Biology}\\
+                 & Research interest: Graph learning for molecule and protein topology\\
+                 & P.I.: Prof. John D. Chodera\\
+                 & \textbf{Memorial Sloan Kettering Cancer Center} and \\
+                 & \textbf{Weill Cornell Medical College}\\
+                 & New York, N.Y.\\\\
+                 
+\textsc{2019--2022} & \textbf{Master of Fine Arts} and Adjunct Assistant Professor \\
+                 & \textsc{Creative Writing---short fiction} \\
+                 & Thesis: \textit{Faraway Rivers and Rolling Mountains} \\
+                 & Advisor: Mark Jay Mirsky \\
+                 & \textbf{City College of New York} \\
+                 & Harlem, New York, N.Y.\\\\
+                 
+\textsc{2019--2021} & \textbf{Master of Bussiness Administration} (Online)\\
+                 & \textbf{Quantic School of Business and Technology} \\
+                 & Washington, D.C.\\\\
+                 
+
+ \textsc{2016--2018}  & \textbf{Bachelor of Science} with \textit{Honor}\\& Major:  \textsc{Comparative Literature} and \textsc{Chemistry}  \\
+ & Theses: \\
+ & * \textit{Folklore Music Renaissance in Comtemporary China} (with Prof. Xiaobing Tang)\\
+ & * \textit{In Silico Discovery of Iron Chelators} (with Prof. Nouri Neamati) \\
+ & \textbf{University of Michigan}\\
+ & Ann Arbor, Mich.
+\\&\\
+2014-2016& \textbf{Bachelor of Science} -- Ministry of Education Plan Everest\\
+& Major: \textsc{Chemistry}\\
+& Theses: \\
+& * \textit{Transition Metal-Catalyzed Synthesis Methodology} \\
+& * \textit{Design of Dye-Sensitized Solar Cells.} (with Prof.Jingsong You) \\
+&\normalsize\textbf{Sichuan University} \\
+& Chengdu, P.R.China\\&\\
+
+\end{longtable}
+
+\section{Publications}
+% \textbf{Wang Y}, Chodera JD. Spatial Attention Kinetic Networks with E(n)-Equivariance. \textit{ICLR} [arXiv:2301.08893]\\\\
+% \textbf{Wang Y}, Fass J, Kaminow B, Herr JE, Rufa D, Zhang I, Pulido I, Bruce MacDonald H, Takaba K, Chodera JD. End-to-End Differentiable Molecular Mechanics Force Field Construction. \textit{RSC Chemical Science} [\url{https://doi.org/10.1039/D2SC02739A}] \\\\
+% \textbf{Wang Y} and Karaletsos T. Stochastic Aggregation in Graph Neural Networks. [\url{arXiv:2102.12648}] \\\\
+% Zhang Y, Lin Y, Zhang Y, \textbf{Wang Y}, Li Z, Zhu Y, Liu H, Ju W, Cui C, and Chen M. Familial atrial myopathy in a large multigenerational heart-hand syndrome pedigree carrying an LMNA missense variant in rod 2B domain (p.R335W). \textit{Heart Rhythm}[\url{https://doi.org/10.1016/j.hrthm.2021.11.022}]\\\\
+% \textbf{Wang Y}, Nguyen M, Retchin M, Karaletsos T, and Chodera JD. Bayesian Active Drug Discovery. [\url{https://realworldml.github.io/files/cr/48_BADD_paper_workshop.pdf}] (ICML RealML Workshop)\\\\
+% \textbf{Wang Y}, Fass J, Stern C, Luo K, and Chodera JD. Graph nets for partial charge prediction. [\url{arXiv:1909.07903}] (NIPS Physics ML workshop)\\\\
+% Wade AD, Rizzi A, \textbf{Wang Y}, and Huggins DJ. Computational Fluorine Scanning Using Free-Energy Perturbation. \textit{J. Chem. Inf. Model. 20195962776-2784.}[\url{doi://10.1021/acs.jcim.9b00228}]\\\\
+
+
+\nocite{*}
+
+\printbibliography[heading=none]
+
+
+
+
+
+
+\section{Literary works}
+\textbf{Wang Y} ``Stop the Train.'' Promethean Magazine, 2022.\\\\
+\textbf{Wang Y} ``A tale of clear broth noodles.'' \textit{A Bite of the Old Times }, Chongqing Publishing House, 2016. [\url{ISBN: 9787229105013}]
+
+% \section{Manuscripts in Preparation}
+% \textbf{Wang Y}, Fass J, and Chodera JD. Hypergraph Functional Potential.\\
+% \textbf{Wang Y} "Homeward", a short story.
+
+% \section{Presentations and Invited Talks}
+% \begin{tabular}{rl}
+% Oct 2019 & Hypergraph Functional Potential and GN-based Partial Charge Predictions\\
+%     & \textbf{Open Force Field Consortium Webinar} \\
+%     & \url{https://youtu.be/ndIgAV2Xwfk}\\
+%     & San Diego, Calif.\\\\
+
+% Oct 2019 & Using Graph Nets (GNs) to predict molecular properties\\
+%          & \textbf{PyData 2019} \\
+%          & \url{https://youtu.be/Al8_pbgrnTM}\\
+%          & New York, N.Y.\\\\
+
+% Aug-Sep 2019 & Graph Nets for Learning Molecular Physics \\
+%          & \textbf{BenevolentAI} Guest Talk\\
+%          & London, U.K.\\
+%          & \textbf{2nd Royal Society of Chemistry A.I. in Chemistry}\\
+%          & Cambridge, U.K.\\
+%          & \textbf{Weill Cornell Biophysics Symposium}\\
+%          & New York, N.Y.\\
+
+% \end{tabular}
+
+%Section: Scholarships and additional info
+\section{Scholarships, Fellowships, Honors and Awards}
+\begin{longtable}{p{0.20\textwidth} p{0.80\textwidth} }
+2023 & \textbf{Simons Foundation}\\
+& Simons Center Postdoctoral Fellowship \\\\
+
+2021 & \textbf{Anagenex, Inc.}\\
+& Distinguished Open Science Fellowship \\\\
+
+2021 & \textbf{City College of New York}\\
+& Teaching Scholarship \\\\
+
+2021 & \textbf{The Irwin and Alice Stark Short Fiction Awards}\\\\
+
+2018-2023 & \textbf{Cornell University Weill Cornell Medical College}\\
+     & Full Scholarship \$ 76,950 each year \\\\
+
+\textsc{2017} & \textbf{University of Michigan UROP} \\ &  Biomedical and Life Sciences Summer Fellowship\\\\
+
+\textsc{Oct 2014 -Jun 2016} & \textbf{Ministry of Education} and  \textbf{Ministry of Finance} of P.R. China \\ &Pilot Plan for Forstering Top-notch Students in Basic Science \\\\
+ \textsc{Jan} 2015 \textsc{Jun} 2015 & National Scholarship for Students in \\ \textsc{Jan} 2016 \textsc{Jun} 2016 & Pilot Plan for Forstering Top-notch Students in Basic Science \\ \footnotesize(Consecutively Four Times) & \emph{First Class}\\\\
+ \textsc 2013 &\textbf{Yangtse Evening Post} \\& Distinguished Student Writer\\
+\end{longtable}
+
+\section{Teaching Experiences}
+\begin{longtable}{p{0.20\textwidth} p{0.80\textwidth} }
+\textsc{2022} & Organizer, Instructor \\
+ & Scientific Computing from Scratch Bootcamp \url{https://scotch.wangyq.net} \\
+ & \textbf{National Science Foundation}\\\\
+
+\textsc{2021} & Adjunct Assistant Professor \\
+ & ENG 110: Freshman Composition \url{https://eng110.wangyq.net} \\
+ & \textbf{City College of New York}\\
+ & New York, N.Y.\\\\
+ 
+ \textsc{2021} & Teaching Assistant \\
+ & Foundations of Data Science \\
+ & \textbf{Memorial Sloan Kettering Cancer Center} \\
+ & New York, N.Y.\\\\
+ 
+  \textsc{2021} & Teaching Assistant \\
+ & B3000: Creative Writing Workshop \\
+ & \textbf{City College of New York}\\
+ & New York, N.Y.\\\\
+ 
+ \textsc{2020} & Teaching Assistant \\
+ & B1965: The Experiment in Fiction in the 20th Century\\
+ & \textbf{City College of New York}\\
+ & New York, N.Y.\\\\
+ 
+ \textsc{2016} & Instructor\\
+ & \textbf{Chengdu Autism Center} \\
+ & Chengdu, P.R. China\\\\
+ 
+  \textsc{2016} & English Instructor \\
+ & Siem Reap, Cambodia\\\\
+ \end{longtable}
+
+
+\section{Working Experiences}
+\begin{longtable}{p{0.20\textwidth} p{0.80\textwidth} }
+\textsc{2023--Current} & Manager, Business Development \\
+& \textbf{Open Molecular Software Fundation} \\
+& Davis, Calif. \\\\
+\textsc{2021} & Machine Learning Software Engineering Ph.D. Intern\\
+ & Facebook Dating, \textbf{Facebook, Inc.}\\
+ & New York, N.Y. and Menlo Park, Calif.\\\\
+\textsc{2019-2020} & Co-founder, CSO\\
+                 & \textbf{Uli (Shenzhen) Technology Co. Ltd.}\\
+                 & Shenzhen, P.R. China\\\\
+\textsc{2019-2020} & Co-founder, CSO\\
+                 & \textbf{Uli, Inc.}\\
+                 & New York, N.Y.\\\\
+\textsc{2017-2018} & Speakers Coach \\
+ & \textbf{TEDxUofM}\\
+ & Ann Arbor, Mich.\\\\
+
+ \textsc{2016} & Subtitle Translator\\
+ & \url{coursera.org} \\\\
+\end{longtable}
+
+\vspace{-10}
+\end{document}
