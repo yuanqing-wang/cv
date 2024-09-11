@@ -1,65 +1,49 @@
-\documentclass[letterpaper,10pt]{article}
+\input{yw_typeset}
+% \usepackage[letterpaper, margin=0.5in, top=0.5in, bottom=0.75in]{geometry}
+% \let\cite\citep
+% \usepackage{hyperref}
+% \usepackage{url}
+% \usepackage{graphicx}
+% \usepackage{algorithm}
+% \usepackage{algorithmic}
+% \usepackage{wrapfig}
+% \usepackage{amsmath}
 
+% \usepackage[
+%   defaultfam,
+%   %extralight,
+%   tabular,
+%   lining
+% ]{montserrat}
 
-%A Few Useful Packages
+% \usepackage[T1]{fontenc}
+% \usepackage[parfill]{parskip}
+% \usepackage{titling}
+% \usepackage{titlesec}
+% \titleformat*{\section}{\large \bfseries }
+% \titleformat*{\paragraph}{\normalsize \bfseries}
 
-\usepackage{marvosym}
-\usepackage{fontspec} 					%for loading fonts
-\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
-\RequirePackage{color,graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[big]{layaureo} 				%better formatting of the A4 page
-% an alternative to Layaureo can be ** \usepackage{fullpage} **
-\usepackage{supertabular} 				%for Grades
-\usepackage{titlesec}					%custom \section
-\usepackage{longtable}
-%Setup hyperref package, and colours for links
-\usepackage{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
-\usepackage[
-backend=biber,
-style=ieee,
-sorting=ydnt
-]{biblatex}
-\addbibresource{main.bib}
-
-
-%FONTS
-\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-%%% modified for Karol Kozioł for ShareLaTeX use
-\setmainfont[
-  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
-  BoldFont=LinLibertine_RB.otf,
-  ItalicFont=LinLibertine_RI.otf,
-  BoldItalicFont=LinLibertine_RBI.otf
-]{LinLibertine_R.otf}
-\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
-%%%
-
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
+% \date{}
+% \usepackage{color}
+% \usepackage{xcolor}
+\bibliographystyle{unsrtnat} 
+\usepackage[square, numbers]{natbib}
+\usepackage{bibentry}
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt}
-%Tweak a bit the top margin
-% \addtolength{\voffset}{-1.3cm}
 
-%Italian hyphenation for the word: ''corporations''
-\hyphenation{im-pre-se}
-
-%-------------WATERMARK TEST [**not part of a CV**]---------------
-\usepackage[absolute]{textpos}
-
-\setlength{\TPHorizModule}{30mm}
-\setlength{\TPVertModule}{\TPHorizModule}
-\textblockorigin{2mm}{0.65\paperheight}
-\setlength{\parindent}{0pt}
+% \definecolor{violet}{HTML}{57068c}
+% \newcommand\highlight[1]{\textcolor{violet}{#1}}
 
 
+% \let\oldtextit\textit
+% \renewcommand\textit[1]{\highlight{\oldtextit{#1}}}
+
+% \let\oldtextbf\textbf
+% \renewcommand\textbf[1]{\highlight{\oldtextbf{#1}}}
+
+\usepackage{longtable}
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
-
 
 %WATERMARK TEST [**not part of a CV**]---------------
 %\font\wm=''Baskerville:color=787878'' at 8pt
@@ -80,35 +64,60 @@ sorting=ydnt
 
 %--------------------TITLE-------------
 \par{\centering
-		{ \Huge  Yuanqing Wang
-	}\bigskip\par}
+		{ \huge  Yuanqing Wang, }
+        { \small M.B.A., M.F.A., Ph.D.}
+ \bigskip\par}
 
 %--------------------SECTIONS-----------------------------------
 %Section: Personal Data
 \begin{center}
 
-417 E 68th St\\
-Zuckerman Research Center Z618\\
-New York, N.Y. 10065\\
-\href{mailto:wangyq@wangyq.net}{wangyq@wangyq.net} +1 (734)834-9058\\
+24 Waverly Place,
+New York, N.Y. 10004\\
+\href{mailto:wangyq@wangyq.net}{wangyq@wangyq.net}\\
 \end{center}
+
+\vspace{10pt}
+
 
 \section{Academic Positions}
 \begin{longtable}{p{0.20\textwidth} p{0.80\textwidth} }
-\textsc{2023--Current} & Simons Center Fellow \\
+\textsc{2023--Current} & Simons Center Independent Fellow \\
 & \textbf{New York University} \\
 & New York, N.Y. \\\\
+
+\textsc{2024--Current} & Schmidt Science Senior Fellow \\
+& \textbf{Rhodes Trust} \\
+& Oxford, U.K. \\\\
+
+\textsc{2023} & Schmidt Science Fellow \\
+& \textbf{Rhodes Trust} \\
+& Oxford, U.K. \\\\
+
+\textsc{2023--Current} & Co-Investigator\\
+& \textbf{Open Force Field Consortium} \\
+& Irvine, Calif. \\\\
+
+\textsc{2023--Current} & Visiting Fellow\\
+& \textbf{Memorial Sloan Kettering Cancer Center} \\
+& New York, N.Y. \\\\
+
+\textsc{2021--2022} & Adjunct Assistant Professor\\
+& \textbf{City College of New York} \\
+& New York, N.Y. \\\\
+
 \end{longtable}
 
-%Section: Education
+
 \section{Education}
 \begin{longtable}{p{0.20\textwidth} p{0.80\textwidth} }
 
-\textsc{2018--2023} & \textbf{Ph.D.}, \textsc{Physiology, Biophysics, and System Biology}\\
+\textsc{2018--2023} & \textbf{Ph.D.}, \textsc{Physiology, Biophysics, and Systems Biology}\\
                  & Research interest: Graph learning for molecule and protein topology\\
                  & P.I.: Prof. John D. Chodera\\
                  & \textbf{Memorial Sloan Kettering Cancer Center} and \\
-                 & \textbf{Weill Cornell Medical College}\\
+                 & \textbf{Weill Cornell Medical College} of \\
+                 & \textbf{Cornell University} \\
                  & New York, N.Y.\\\\
                  
 \textsc{2019--2022} & \textbf{Master of Fine Arts} and Adjunct Assistant Professor \\
@@ -140,7 +149,6 @@ New York, N.Y. 10065\\
 
 \end{longtable}
 
-\section{Publications}
 % \textbf{Wang Y}, Chodera JD. Spatial Attention Kinetic Networks with E(n)-Equivariance. \textit{ICLR} [arXiv:2301.08893]\\\\
 % \textbf{Wang Y}, Fass J, Kaminow B, Herr JE, Rufa D, Zhang I, Pulido I, Bruce MacDonald H, Takaba K, Chodera JD. End-to-End Differentiable Molecular Mechanics Force Field Construction. \textit{RSC Chemical Science} [\url{https://doi.org/10.1039/D2SC02739A}] \\\\
 % \textbf{Wang Y} and Karaletsos T. Stochastic Aggregation in Graph Neural Networks. [\url{arXiv:2102.12648}] \\\\
@@ -150,71 +158,14 @@ New York, N.Y. 10065\\
 % Wade AD, Rizzi A, \textbf{Wang Y}, and Huggins DJ. Computational Fluorine Scanning Using Free-Energy Perturbation. \textit{J. Chem. Inf. Model. 20195962776-2784.}[\url{doi://10.1021/acs.jcim.9b00228}]\\\\
 
 
-\nocite{*}
-
-\printbibliography[heading=none]
-
-
-
-
-
-
-\section{Literary works}
-\textbf{Wang Y} ``Stop the Train.'' Promethean Magazine, 2022.\\\\
-\textbf{Wang Y} ``A tale of clear broth noodles.'' \textit{A Bite of the Old Times }, Chongqing Publishing House, 2016. [\url{ISBN: 9787229105013}]
-
-% \section{Manuscripts in Preparation}
-% \textbf{Wang Y}, Fass J, and Chodera JD. Hypergraph Functional Potential.\\
-% \textbf{Wang Y} "Homeward", a short story.
-
-% \section{Presentations and Invited Talks}
-% \begin{tabular}{rl}
-% Oct 2019 & Hypergraph Functional Potential and GN-based Partial Charge Predictions\\
-%     & \textbf{Open Force Field Consortium Webinar} \\
-%     & \url{https://youtu.be/ndIgAV2Xwfk}\\
-%     & San Diego, Calif.\\\\
-
-% Oct 2019 & Using Graph Nets (GNs) to predict molecular properties\\
-%          & \textbf{PyData 2019} \\
-%          & \url{https://youtu.be/Al8_pbgrnTM}\\
-%          & New York, N.Y.\\\\
-
-% Aug-Sep 2019 & Graph Nets for Learning Molecular Physics \\
-%          & \textbf{BenevolentAI} Guest Talk\\
-%          & London, U.K.\\
-%          & \textbf{2nd Royal Society of Chemistry A.I. in Chemistry}\\
-%          & Cambridge, U.K.\\
-%          & \textbf{Weill Cornell Biophysics Symposium}\\
-%          & New York, N.Y.\\
-
-% \end{tabular}
-
-%Section: Scholarships and additional info
-\section{Scholarships, Fellowships, Honors and Awards}
-\begin{longtable}{p{0.20\textwidth} p{0.80\textwidth} }
-2023 & \textbf{Simons Foundation}\\
-& Simons Center Postdoctoral Fellowship \\\\
-
-2021 & \textbf{Anagenex, Inc.}\\
-& Distinguished Open Science Fellowship \\\\
-
-2021 & \textbf{City College of New York}\\
-& Teaching Scholarship \\\\
-
-2021 & \textbf{The Irwin and Alice Stark Short Fiction Awards}\\\\
-
-2018-2023 & \textbf{Cornell University Weill Cornell Medical College}\\
-     & Full Scholarship \$ 76,950 each year \\\\
-
-\textsc{2017} & \textbf{University of Michigan UROP} \\ &  Biomedical and Life Sciences Summer Fellowship\\\\
-
-\textsc{Oct 2014 -Jun 2016} & \textbf{Ministry of Education} and  \textbf{Ministry of Finance} of P.R. China \\ &Pilot Plan for Forstering Top-notch Students in Basic Science \\\\
- \textsc{Jan} 2015 \textsc{Jun} 2015 & National Scholarship for Students in \\ \textsc{Jan} 2016 \textsc{Jun} 2016 & Pilot Plan for Forstering Top-notch Students in Basic Science \\ \footnotesize(Consecutively Four Times) & \emph{First Class}\\\\
- \textsc 2013 &\textbf{Yangtse Evening Post} \\& Distinguished Student Writer\\
-\end{longtable}
 
 \section{Teaching Experiences}
 \begin{longtable}{p{0.20\textwidth} p{0.80\textwidth} }
+\textsc{2023-2024} & Cover instructor \\
+ & for Professor Mark Tuckerman, \textit{CHEM-GA-2600} Statistical Mechanics \\
+ & \textbf{New York University} \\
+ & New York, N.Y.\\\\
+
 \textsc{2022} & Organizer, Instructor \\
  & Scientific Computing from Scratch Bootcamp \url{https://scotch.wangyq.net} \\
  & \textbf{National Science Foundation}\\\\
@@ -247,28 +198,145 @@ New York, N.Y. 10065\\
  & Siem Reap, Cambodia\\\\
  \end{longtable}
 
+%Section: Scholarships and additional info
+\section{Scholarships, Fellowships, Honors and Awards}
+\begin{longtable}{p{0.20\textwidth} p{0.80\textwidth} }
+2023-2025 & \textbf{Schmidt Science Fellow}, in partnership with the \textbf{Rhodes Trust} \\
+& Schmidt Science Fellowship\\\\
+
+2023-2026 & \textbf{Simons Foundation}\\
+& Simons Center Independent Postdoctoral Fellowship \\\\
+
+2021 & \textbf{Anagenex, Inc.}\\
+& Distinguished Open Science Fellowship \\\\
+
+2021 & \textbf{City College of New York}\\
+& Teaching Scholarship \\\\
+
+2021 & \textbf{The Irwin and Alice Stark Short Fiction Awards}\\\\
+
+2018-2023 & \textbf{Cornell University Weill Cornell Medical College}\\
+     & Full Scholarship \$ 76,950 each year \\\\
+
+\textsc{2017} & \textbf{University of Michigan UROP} \\ &  Biomedical and Life Sciences Summer Fellowship\\\\
+
+\textsc{Oct 2014 -Jun 2016} & \textbf{Ministry of Education} and  \textbf{Ministry of Finance} of P.R. China \\ &Pilot Plan for Forstering Top-notch Students in Basic Science \\\\
+ \textsc{Jan} 2015 \textsc{Jun} 2015 & National Scholarship for Students in \\ \textsc{Jan} 2016 \textsc{Jun} 2016 & Pilot Plan for Forstering Top-notch Students in Basic Science \\ \footnotesize(Consecutively Four Times) & \emph{First Class}\\\\
+ \textsc 2013 &\textbf{Yangtse Evening Post} \\& Distinguished Student Writer\\
+\end{longtable}
+
+
+\section{Community Services}
+\begin{longtable}{p{0.20\textwidth} p{0.80\textwidth} }
+\textsc{2024} & Reviewer \\
+& \textbf{International Conference on Learning and Representation} \\
+& Singapore \\\\
+
+
+2024 & Reviewer \\
+& \textbf{NeurIPS 2024} \\
+& Vancouver, B.C. \\\\
+
+\textsc{2024} & Organizer \\
+& \textbf{New York Area Group for Informatics and Modeling} \\
+& New York, N.Y. \\\\
+
+
+\textsc{2023} & Manager, Business Development \\
+& \textbf{Open Molecular Software Fundation} \\
+& Davis, Calif. \\\\
+
+
+
+
+\end{longtable}
+
 
 \section{Working Experiences}
 \begin{longtable}{p{0.20\textwidth} p{0.80\textwidth} }
-\textsc{2023--Current} & Manager, Business Development \\
+\textsc{2023} & Consultant, Machine Learning \\
+& \textbf{Flagship Pioneering, Inc.} \\
+& Cambridge, Mass.\\\\
+\textsc{2023} & Manager, Business Development \\
 & \textbf{Open Molecular Software Fundation} \\
 & Davis, Calif. \\\\
 \textsc{2021} & Machine Learning Software Engineering Ph.D. Intern\\
  & Facebook Dating, \textbf{Facebook, Inc.}\\
  & New York, N.Y. and Menlo Park, Calif.\\\\
 \textsc{2019-2020} & Co-founder, CSO\\
-                 & \textbf{Uli (Shenzhen) Technology Co. Ltd.}\\
-                 & Shenzhen, P.R. China\\\\
-\textsc{2019-2020} & Co-founder, CSO\\
-                 & \textbf{Uli, Inc.}\\
-                 & New York, N.Y.\\\\
-\textsc{2017-2018} & Speakers Coach \\
- & \textbf{TEDxUofM}\\
- & Ann Arbor, Mich.\\\\
+                 & \textbf{Uli (Shenzhen) Technology Co. Ltd.} and \textbf{Uli, Inc.}\\
+                 & New York, N.Y. \& Shenzhen, P.R. China\\\\
+% \textsc{2017-2018} & Speakers Coach \\
+%  & \textbf{TEDxUofM}\\
+%  & Ann Arbor, Mich.\\\\
 
- \textsc{2016} & Subtitle Translator\\
+ \textsc{2016} & Subtitle Translator for 
+ Andrew Ng's Machine Learning \& Python for everyone\\
  & \url{coursera.org} \\\\
 \end{longtable}
 
-\vspace{-10}
+%Section: Education
+
+
+\bibentry{
+    wang2024designspacemolecularmechanics,
+    Xu_Bian_Ju_Zhao_Xie_Wang_Hu_Sun_Zhang_Zhu_2024,
+    wang2024non,
+    wang2024open,
+    wang2024espalomacharge,
+    takaba2024machine,
+    retchin2024druggym,
+    wang2023spatial,
+    eastman2023openmm,
+    wang2023spatial,
+    wang2022end,
+    zhang2022familial,
+    wang2021stochastic,
+    wade2019computational,
+}
+
+\bibliography{main}
+
+\section{Presentations and Invited Talks}
+\begin{tabular}{rl}
+Aug-Sep 2024 & \textbf{Non-convolutional graph neural networks}\\
+& Beijing Academy of Artificial Intelligence, Beijing, P.R.China\\
+& Simons Center Seminar, New York, N.Y. \\\\
+
+
+
+Apr-Dec 2023 & \textbf{Graph neural networks of, by, and for the chemists} \\
+& Open Molecular Software Foundation conference, Boston, Mass.\\
+& Simons Center Symposium, New York University, New York, N.Y.\\\\
+
+
+Feb-Jul 2023 & \textbf{From Espaloma to SAKE: }\\
+& \textbf{To brew, distill, and mix force fields} \\
+& \textbf{with balanced briskness, smoothness, and intricacy}\\
+& Folding @ Home Science Talk, \url{https://data.wangyq.net/fah_talk}, New York, N.Y. \\
+& Guest seminar, Freie Universität, Berlin, Germany \\
+& OpenEye CUP XXII, Santa Fe, N.Méx.\\
+& Seminar at University of Colorado, Boulder, Colo.\\
+& Seminar at Jihua Labs, Foshan, P.R.China\\
+& Seminar at China Pharmaceutical University, Nanjing, P.R.China\\
+& Guest lecture at Peking University, Beijing, P.R.China \\
+& Interdisciplinary Colloquium, NYU Shanghai, Shanghai, P.R.China\\
+& Seminar at DPTech, Beijing, P.R.China\\
+& Seminar at XtalPi, Shenzhen, P.R. China\\
+& Scipy Conference, Austin, Tx.\\\\
+
+Oct 2019 & \textbf{Hypergraph Functional Potential and GN-based Partial Charge Predictions}\\
+    & Open Force Field Consortium Webinar, \url{https://youtu.be/ndIgAV2Xwfk}, San Diego, Calif.\\\\
+
+Oct 2019 & \textbf{Using Graph Nets (GNs) to predict molecular properties}\\
+         & PyData 2019, \url{https://youtu.be/Al8_pbgrnTM}, New York, N.Y.\\\\
+
+Aug-Sep 2019 & \textbf{Graph Nets for Learning Molecular Physics} \\
+         & BenevolentAI Guest Talk, London, U.K.\\
+         & 2nd Royal Society of Chemistry A.I. in Chemistry, Cambridge, U.K.\\
+         & Weill Cornell Biophysics Symposium, New York, N.Y.\\
+
+\end{tabular}
+
+
 \end{document}

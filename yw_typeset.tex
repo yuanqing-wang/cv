@@ -1,0 +1,42 @@
+\documentclass[10pt]{article} % For LaTeX2e
+\usepackage[letterpaper, margin=0.5in, top=0.5in, bottom=0.75in]{geometry}
+\let\cite\citep
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+
+\usepackage[
+  defaultfam,
+  %extralight,
+  tabular,
+  lining
+]{montserrat}
+
+\usepackage[T1]{fontenc}
+\usepackage[parfill]{parskip}
+\usepackage{titling}
+\usepackage{titlesec}
+\titleformat*{\section}{\large \bfseries }
+\titleformat*{\paragraph}{\normalsize \bfseries}
+
+\date{}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[square, numbers]{natbib}
+
+\definecolor{violet}{HTML}{57068c}
+\newcommand\highlight[1]{\textcolor{violet}{#1}}
+
+
+\let\oldtextit\textit
+\renewcommand\textit[1]{\highlight{\oldtextit{#1}}}
+
+\let\oldtextbf\textbf
+\renewcommand\textbf[1]{\highlight{\oldtextbf{#1}}}
+
+
+\usepackage{lettrine}
